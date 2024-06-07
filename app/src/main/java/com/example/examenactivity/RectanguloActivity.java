@@ -28,15 +28,14 @@ public class RectanguloActivity extends AppCompatActivity {
         btnCalcular = findViewById(R.id.btnCalcular);
         btnRegresar = findViewById(R.id.btnRegresar);
 
-        // Obtener datos del Intent
+
         float base = getIntent().getFloatExtra("BASE", 0);
         float altura = getIntent().getFloatExtra("ALTURA", 0);
         String nombre = getIntent().getStringExtra("NOMBRE");
 
-        // Crear una instancia de Rectangulo con los datos obtenidos
         rectangulo = new Rectangulo(base, altura);
 
-        // Mostrar datos
+
         Nombre.setText(nombre);
         Base.setText(String.format("Base: %.2f", base));
         Altura.setText(String.format("Altura: %.2f", altura));

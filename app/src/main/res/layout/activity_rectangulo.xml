@@ -23,7 +23,9 @@
                 android:layout_height="wrap_content"
                 android:text="Nombre: "
                 android:textSize="24sp"
-                />
+                >
+
+            </TextView>
 
             <TextView
                 android:id="@+id/txtBase"
@@ -31,7 +33,9 @@
                 android:layout_height="wrap_content"
                 android:text="Base: "
                 android:textSize="18sp"
-                android:paddingTop="20dp"/>
+                android:paddingTop="20dp">
+
+            </TextView>
 
             <TextView
                 android:id="@+id/txtAltura"
@@ -39,7 +43,9 @@
                 android:layout_height="wrap_content"
                 android:text="Altura: "
                 android:textSize="18sp"
-                android:paddingTop="20dp"/>
+                android:paddingTop="20dp">
+
+            </TextView>
 
             <RadioGroup
                 android:layout_width="match_parent"
@@ -51,34 +57,47 @@
                     android:id="@+id/rdbArea"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Calcular Área"/>
+                    android:text="Calcular Área">
+
+                </RadioButton>
 
                 <RadioButton
                     android:id="@+id/rdbPerimetro"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Calcular Perímetro"/>
+                    android:text="Calcular Perímetro">
+
+                </RadioButton>
             </RadioGroup>
 
-            <Button
-                android:id="@+id/btnCalcular"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Calcular"/>
 
             <TextView
                 android:id="@+id/txtResultado"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
-                android:gravity="center"/>
+                android:gravity="center">
+
+            </TextView>
+
+            <Button
+                android:id="@+id/btnCalcular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="100dp"
+                android:text="Calcular">
+
+            </Button>
 
             <Button
                 android:id="@+id/btnRegresar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Regresar"
-                android:layout_marginTop="250dp"/>
+                android:layout_marginTop="60dp">
+
+            </Button>
         </LinearLayout>
 
 
