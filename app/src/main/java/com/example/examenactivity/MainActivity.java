@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -39,6 +38,9 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(validarCampos()) {
                     Intent intent = new Intent(MainActivity.this, RectanguloActivity.class);
+                    intent.putExtra("NOMBRE", Nombre.getText().toString());
+                    intent.putExtra("BASE", Float.parseFloat(Base.getText().toString()));
+                    intent.putExtra("ALTURA", Float.parseFloat(Altura.getText().toString()));
                     startActivity(intent);
                 }
             }
@@ -53,18 +55,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private boolean validarCampos() {
+        boolean valid = true;
         if(Nombre.getText().toString().isEmpty()) {
             Nombre.setError("El nombre es obligatorio");
-            return false;
+            valid = false;
         }
         if(Base.getText().toString().isEmpty()) {
             Base.setError("La base es obligatoria");
-            return false;
+            valid = false;
         }
         if(Altura.getText().toString().isEmpty()) {
             Altura.setError("La altura es obligatoria");
-            return false;
+            valid = false;
         }
-        return true;
+        return valid;
     }
 }
