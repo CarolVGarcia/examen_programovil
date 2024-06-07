@@ -9,18 +9,87 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvCalculosRectangulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CALCULOS DE RECTANGULO"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:layout_marginTop="16dp"
+                android:layout_margin="10dp">
+
+            </TextView>
+
+
+
+            <EditText
+                android:id="@+id/txtNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombre"
+                android:inputType="textPersonName"
+                android:layout_marginTop="80dp"/>
+
+            <EditText
+                android:id="@+id/txtBase"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Base"
+                android:inputType="numberDecimal"
+                android:layout_below="@id/txtNombre"
+                android:layout_marginTop="8dp" />
+
+            <EditText
+                android:id="@+id/txtAltura"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Altura"
+                android:inputType="numberDecimal"
+                android:layout_below="@id/txtBase"
+                android:layout_marginTop="8dp" />
+
+            <Button
+                android:id="@+id/btnLimpiar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Limpiar"
+                android:layout_below="@id/txtAltura"
+                android:layout_marginTop="300dp" />
+
+            <Button
+                android:id="@+id/btnSiguiente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Siguiente"
+                android:layout_toRightOf="@id/btnLimpiar"
+                android:layout_alignTop="@id/btnLimpiar"
+                android:layout_marginLeft="16dp" />
+
+            <Button
+                android:id="@+id/btnSalir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Salir"
+                android:layout_toRightOf="@id/btnSiguiente"
+                android:layout_alignTop="@id/btnSiguiente"
+                android:layout_marginLeft="16dp" />
+        </RelativeLayout>
+
+
+
 
     </LinearLayout>
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
